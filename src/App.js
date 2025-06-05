@@ -6,6 +6,7 @@ const App = () => {
   return (
     <div>
         <Header />
+        {/* Search Bar  */}
         <CardContainer />
       
     </div>

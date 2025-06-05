@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { navLinks } from "../data/navLinks";
 
 const Header = () => {
-
-    const logo = new URL('../assets/logo.png', import.meta.url).href;
+  
+  const logo = new URL('../assets/logo.png', import.meta.url).href;
     
   return (
     <header className="w-full bg-white shadow-lg border-b-2 border-amber-300">
@@ -21,18 +22,7 @@ const Header = () => {
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200">
-              Home
-            </Link>
-            <Link to="/restaurants" className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200">
-              Restaurants
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200">
-              Contact
-            </Link>
+            {navLinks.map((nav) => <Link key={nav.id} to={nav.to} className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200">{nav.name}</Link>)}
           </nav>
 
           {/* Action Buttons */}
