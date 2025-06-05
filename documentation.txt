@@ -1,0 +1,7 @@
+- transition-colors and duration-200 give that nice hover effect on nav links.
+
+- For parcel, I faced an issue with rendering images. The issue was, the image was not being copied, or not being processed into the dist folder. One way was to manually copy it into the dist folder, which ofc is not feasible. The other way, was using the URL Object. Parcel will process any files referenced by a URL dependency as it does any other dependency. We did 
+const logo = new URL('../assets/logo.png', import.meta.url).href;
+
+- Learn about flex and flex wrap. 
+    
